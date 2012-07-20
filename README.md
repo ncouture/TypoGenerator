@@ -7,14 +7,14 @@ Configuration
 
 Methods
 -------
-## insertedKey
-## skipLetter
-## doubleLetter
-## reverseLetter
-## wrongVowel
-## wrongKey
-## synonymSubstitution
-## rhymeSubstitution
+### insertedKey
+### skipLetter
+### doubleLetter
+### reverseLetter
+### wrongVowel
+### wrongKey
+### synonymSubstitution
+### rhymeSubstitution
 
 Dependencies
 ------------
