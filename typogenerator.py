@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+import sys
+import os
 import json
 import subprocess
 import SocketServer
@@ -9,14 +11,14 @@ from nltk.corpus import wordnet
 
 from daemon import daemon, pidlockfile
 
-PORT = 18913
+PORT = 2828
 LISTEN = "0"
 DICTIONARY = "/usr/share/dict/words"
 
 if not os.path.isfile(DICTIONARY):
     raise FileNotFound("Could not find dictionary: %s" % DICTIONARY)
 
-PID_FILE = '/home/typogenerator/var/run/typogenerator.pid'
+PID_FILE = '/home/self/backup/dev/TypoGenerator/typogenerator.pid'
 
 alphabet = "abcdefghijklmnopqrstuvwxyz0123456789"
 vowels = "aeiouy"
@@ -230,6 +232,7 @@ class SimpleThreadedXMLRPCServer(SocketServer.ThreadingMixIn, SimpleXMLRPCServer
 
 if __name__ == "__main__":
     pidlock = pidlockfile.PIDLockFile(PID_FILE)
+
     if pidlock.is_locked():
         sys.exit(1)
 
