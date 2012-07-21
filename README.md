@@ -1,5 +1,8 @@
-TypoGenerator
+Python TypoGenerator
 =============
+
+This is a typo generator wrapped in an XMLRPC service that returns JSON.
+
 
 Configuration
 -------------
